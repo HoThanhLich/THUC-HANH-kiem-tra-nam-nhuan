@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is leap year</title>
+</head>
+<body>
+<script>
+
+    let year = parseInt(prompt("Hãy nhập năm:"));
+    let isLeapYear;
+
+    let isDividedBy4 = (year % 4 === 0);
+    let isDividedBy100 = (year % 100 === 0);
+    let isDividedBy400 = (year % 400 === 0);
+
+    if (isDividedBy4) {
+        if (isDividedBy100) {
+            if (isDividedBy400) {
+                isLeapYear = true;
+            } else {
+                isLeapYear = false;
+            }
+        } else {
+            isLeapYear = true;
+        }
+    } else {
+        isLeapYear = false;
+    }
+
+    if (isLeapYear) {
+        alert(year + ' Đúng Là Năm Nhuận!');
+    } else {
+        alert(year + ' Không phải là năm nhuận!');
+    }
+
+</script>
+</body>
+</html>
